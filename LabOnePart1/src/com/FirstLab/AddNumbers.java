@@ -31,6 +31,8 @@ public class AddNumbers {
 		isdigValid = false;
 
 		// Get user input
+
+
 		while (isdigValid == false) {
 			System.out.println("Enter a whole number (up to 9 digits):");
 			usrNum1 = scnum.next();
@@ -45,10 +47,14 @@ public class AddNumbers {
 
 			// check that length of sequences match and under 9 digits
 
-			if (n1Length != n2Length && n1Length > 10 && n2Length > 10) {
+			if (n1Length != n2Length) {
+				isdigValid = false;
+				System.out.println("Not a valid entry. Numbers only. Use equal amount of digits.");
+			} else if (n1Length > 10 && n2Length > 10) {
 				isdigValid = false;
 				System.out.println("Not a valid entry. Numbers only. Use equal amount of digits.");
 			}
+
 
 			// if all good, parse as integers and check sums
 			else if (usrNum1.matches("[0-9]+") && usrNum2.matches("[0-9]+")) {
