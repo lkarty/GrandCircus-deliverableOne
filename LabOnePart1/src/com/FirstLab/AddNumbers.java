@@ -54,10 +54,14 @@ public class AddNumbers {
 				isdigValid = false;
 				System.out.println("Not a valid entry. Numbers only. Use equal amount of digits.");
 			}
-
+			// check string for numbers
+			else if (!(usrNum1.matches("[0-9]+") && usrNum2.matches("[0-9]+"))) {
+				isdigValid = false;
+				System.out.println("Not a valid entry. Numbers only. Use equal amount of digits.");
+			}
 
 			// if all good, parse as integers and check sums
-			else if (usrNum1.matches("[0-9]+") && usrNum2.matches("[0-9]+")) {
+			else {
 
 				isdigValid = true;
 
